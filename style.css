@@ -1,0 +1,12 @@
+body{
+    padding: 40px 80px;
+}
+h1{
+    text-align: center;
+}
+div{
+    padding: 20px;
+    margin-left: -150px;
+    opacity: 0;
+    transition: all 1s;
+}

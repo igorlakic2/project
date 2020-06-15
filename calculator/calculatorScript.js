@@ -1,7 +1,6 @@
 const btns = document.querySelectorAll("button");
 let display = document.querySelector(".display");
 let numbers = document.querySelectorAll(".num");
-let operations = document.getElementsByClassName("operations");
 let number1 = null;
 let number2 = null;
 let operator = null;
@@ -31,14 +30,9 @@ for(let i=0; i<btns.length; i++){
         if(number1 && number2){            
             let res = calculate(number1, number2, operator);
             display.textContent = res;
-            setTimeout(() => {
-                alert("Done!");
-                display.textContent = "0";
-                number1 = null;
-                number2 = null;
-                operator = null;
-
-            }, 1500);            
+            number1 = display.textContent;
+            number2 = null;
+            operator = null;           
         }
 
 
