@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
     <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="../navigation.css">
 </head>
 <body>
+    <div class="background">
+        <nav>
+            <span id="close">&times;</span>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../calculator/calculator.html">CALCULATOR</a></li>
+            </ul>        
+        </nav>
+    </div>
+
+    <div id="open">MENU</div>
+
     <div class="clock">
         <div class="hand hour"></div>
         <div class="hand min"></div>
@@ -27,5 +40,6 @@
     </div>
 
     <script src="clockScript.js"></script>
+    <script src="../navigation.js"></script>
 </body>
 </html>

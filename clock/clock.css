@@ -5,6 +5,7 @@
     border: 5px solid black;
     margin: 50px auto;
     position: relative;
+    transition: none;
 }
 .hand{
     height: 7px;
