@@ -1,5 +1,5 @@
 body{
-    padding: 40px 80px;
+    padding: 0 80px;
 }
 h1{
     text-align: center;
@@ -9,4 +9,5 @@ div{
     margin-left: -150px;
     opacity: 0;
     transition: all 1s;
+    display: inline-block;
 }
