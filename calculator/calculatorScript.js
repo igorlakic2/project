@@ -13,6 +13,15 @@ for(let i=0; i<btns.length; i++){
 
         display.innerHTML += btns[i].textContent;
 
+        // if(btns[i].textContent == '.'){
+        //     let dsp = display.textContent;
+        //     if(dsp.indexOf('.') == -1){
+        //         display.textContent += '';                
+        //     }else{
+        //         display.textContent = dsp;
+        //     }
+        // }
+        
         if(btns[i].className == "operation"){
             let temp = display.textContent;
             number1 = temp.slice(0, temp.length-1);
@@ -39,6 +48,7 @@ for(let i=0; i<btns.length; i++){
         if(btns[i].dataset.action == "clear"){
             display.textContent = "0";
         }
+
     })
 }
 
