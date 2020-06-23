@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <title>Filter</title>
+    <link rel="stylesheet" href="filter.css">
+    <link rel="stylesheet" href="../navigation.css">
+</head>
+<body>
+    <div class="background">
+        <nav>            
+            <span id="close">&times;</span>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../clock/clock.html">CLOCK</a></li>
+                <li><a href="../quiz/quiz.html">QUIZ</a></li>
+            </ul>        
+        </nav>
+    </div>
+
+    <div id="open">MENU</div>
+
+    <div class="filter">
+        <button id="add">ADD <i id="icn" class="fas fa-chevron-down"></i></i></button>
+        <div class="addDiv" style="height: 0px;">
+            <input type="text" name="" id="addInput" placeholder="Add">
+            <select style="display: none;" id="">
+                <option value="serbia">Serbia</option>
+                <option value="spain">Spain</option>
+                <option value="russia">Russia</option>
+                <option value="china">China</option>
+            </select>
+            <button class="addBtn">ADD</button>
+        </div>
+
+        <input type="text" name="" id="searchInput" placeholder="Search">
+
+        <div class="group">
+            <div class="all">ALL</div>
+            <div class="serbia">SERBIA</div>
+            <div class="spain">SPAIN</div>
+            <div class="russia">RUSSIA</div>
+            <div class="china">CHINA</div>
+        </div>
+    </div>
+
+    <script src="filterScript.js"></script>
+    <script src="../navigation.js"></script>
+</body>
+</html>

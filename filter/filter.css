@@ -1,0 +1,62 @@
+*{
+    transition: all 0.5s;
+}
+.filter{
+    margin: 100px auto;
+    width: 56%;
+}
+button{
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #0b56a4;
+    margin: 20px 0;
+    color: #0b56a4;
+    font-size: 17px;
+}
+.group div{
+    width: 50px;
+    /* height: 70px;  */
+    background-color: #0b56a4;
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+input{
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    background-size: 20px;
+    margin: 10px 0;
+    padding: 5px 35px;
+    height: 25px;
+    font-size: 17px;
+    width: 500px;
+    border: 1px solid #0b56a4;
+    color: #0b56a4;
+}
+#searchInput{
+    background-image: url('../img/search-solid.svg');    
+}
+#addInput{
+    background-image: url('../img/plus-solid.svg');    
+}
+select{
+    padding: 8px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 1px solid #0b56a4;
+    display: none;
+    transition: all 0.5s;
+}
+.addDiv{
+    height: 0px;
+    transition: height 0.5s;
+}
+.addBtn{
+    display: none;
+    padding: 8px 20px;
+    margin: 10px 0;
+}
