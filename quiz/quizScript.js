@@ -23,22 +23,16 @@ function Question(question, answers, correctAnswer) {
     this.correctOrWrong = () => {                
         let a = document.querySelectorAll(".answer");
 
-        for(let i=0; i<this.answers.length; i++){    
-            if(a[i].className == 'selected'){ 
-                a[i].classList.toggle("selected");   
-            }   
-            a[i].addEventListener('click', () => {    
+        for(let i=0; i<this.answers.length; i++){          
+            a[i].addEventListener('click', () => {  
+                for(let i=0; i<this.answers.length; i++){  
+                    a[i].classList.remove("selected"); 
+                    a[i].style.pointerEvents = 'none';
+                }
                 a[i].classList.add("selected"); 
                 if(this.answers[i] == this.answers[this.correctAnswer]){
-                    console.log("TRUE");
-                    score += 5;
-                    console.log(score);
                     trueAnswer++;
-                }else{
-                    console.log("False! Try again...");
-                    score -= 2;
-                    console.log(score);                    
-                } 
+                }
             });
         }
     }
@@ -50,14 +44,12 @@ let q3 = new Question("100 - 22?", ["50", "100", "80", "40", "78"], 4);
 let q4 = new Question("9 * 0?", ["90", "1", "0", "9"], 2);
 let q5 = new Question("11 + 20?", ["30", "1120", "21", "31"], 3);
 let q6 = new Question("0 / 45645?", ["0", "0.45645", "infinty"], 0);
-let q7 = new Question("100 - 321?", ["50", "100", "80", "40", "78"], 4);
+let q7 = new Question("100 / 0?", ["50", "0", "80", "infinity", "78"], 3);
 let q8 = new Question("9 * 10?", ["10", "90", "130", "900"], 1);
 
 let questions = [q1, q2, q3, q4, q5, q6, q7, q8];
 shuffle(questions);
-let len = questions.length;
 let x = 0;
-
 let rnd = Math.round(Math.random() * 8);
 
 finish.addEventListener('click', () => {
@@ -75,7 +67,6 @@ next.addEventListener('click', () => {
     questions[x].display();
     questions[x].correctOrWrong();
     x++;
-    console.log(score);
 
     if(x == questions.length){
         next.style.display = "none";
