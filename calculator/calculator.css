@@ -47,6 +47,42 @@
     grid-template-columns: 150px;
     grid-template-rows: 360px;
   }
-  
-  /*# sourceMappingURL=calculator.css.map */
-  
+  @media (max-width: 850px){
+    .calculator{
+        margin: 100px auto;
+    }
+  }
+  @media (max-width: 660px){
+      .calculator{
+          width: 400px;
+      }
+      .calculator .buttons{
+        width: unset;
+      }
+      .calculator .buttons .operations{
+          grid-template-columns: 100px 100px 100px 100px;
+      }
+      .calculator .buttons .numbers{
+          grid-template-columns: 100px 100px 100px;
+      }
+      .calculator .buttons .equalDiv {
+          grid-template-columns: 100px;
+      }
+  }
+  /* @media (max-width: 500px){
+    .calculator{
+        width: 80%;
+    }
+    .calculator .buttons{
+      width: unset;
+    }
+    .calculator .buttons .operations{
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+    .calculator .buttons .numbers{
+        grid-template-columns: 100px 100px 100px;
+    }
+    .calculator .buttons .equalDiv {
+        grid-template-columns: 100px;
+    }
+} */
