@@ -56,6 +56,7 @@ add.addEventListener('click', () => {
 let x = "";
 
 const display = (country) => {    
+    row = document.querySelectorAll("tr.row");
     for(let i=0; i<row.length; i++){
         row[i].style.display = 'none';
         if(country != 'all'){
@@ -70,6 +71,7 @@ const display = (country) => {
 }
 
 const search = () => {
+    row = document.querySelectorAll("tr.row");
     let x = searchInput.value.toLowerCase();
     for(let i=0; i<row.length; i++){ 
         let a = row[i];       
