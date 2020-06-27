@@ -46,13 +46,6 @@
             <div class="groupEl" onclick="display('china')">CHINA</div>
         </div>
 
-        <!-- <ul id="myUL">
-          <li class="row serbia">Belgrade, Serbia</li>
-          <li class="row spain">Madrid, Spain</li>        
-          <li class="row russia">Saint Petersburg, Russia</li>
-          <li class="row china">Shanghai, China</li>
-        </ul>-->
-
         <table id="myTable">
             <tr class="header">
               <th style="width:60%;">City</th>
@@ -60,19 +53,19 @@
             </tr>
             <tr class="row serbia">
               <td>Belgrade</td>
-              <td>Serbia</td>
+              <td>Serbia <span class="delete" onclick="deleteRow(this)">&times;</span></td>
             </tr>
             <tr class="row spain">
               <td>Madrid</td>
-              <td>Spain</td>
+              <td>Spain <span class="delete" onclick="deleteRow(this)">&times;</span></td>
             </tr>
             <tr class="row russia">
               <td>Saint Petersburg</td>
-              <td>Russia</td>
+              <td>Russia <span class="delete" onclick="deleteRow(this)">&times;</span></td>
             </tr>
             <tr class="row china">
               <td>Shanghai</td>
-              <td>China</td>
+              <td>China <span class="delete" onclick="deleteRow(this)">&times;</span></td>
             </tr>
         </table> 
     </div>

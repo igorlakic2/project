@@ -9,6 +9,7 @@ let selectList = document.querySelector("#select");
 let group = document.querySelectorAll(".groupEl");
 let row = document.querySelectorAll("tr.row");
 let searchInput = document.querySelector("#searchInput");
+let deleteSpan = document.querySelectorAll("span");
 
 add.addEventListener('click', () => {
     if(addDiv.style.height == "0px"){
@@ -53,15 +54,12 @@ add.addEventListener('click', () => {
 //     })
 // }
 
-let x = "";
-
 const display = (country) => {    
     row = document.querySelectorAll("tr.row");
     for(let i=0; i<row.length; i++){
         row[i].style.display = 'none';
         if(country != 'all'){
-            x = country;
-            if(row[i].className.indexOf(x) > -1){
+            if(row[i].className.indexOf(country) > -1){
                 row[i].style.display = 'table-row';
             }
         }else{
@@ -84,14 +82,27 @@ const search = () => {
     }
 }
 
+const deleteRow = (el) => {
+    let row = el.parentElement.parentElement;
+    row.parentElement.removeChild(row);
+}
+
+// for(let i=0; i<deleteSpan.length; i++){
+//     deleteSpan[i].addEventListener('click', () =>{
+//         row = document.querySelectorAll("tr.row");    
+//         for(let i=0; i<row.length; i++){ 
+//             row[i].style.display = "none";
+//         }  
+//     });
+// }
+
 addBtn.addEventListener('click', () => {
     let strUser = selectList.options[selectList.selectedIndex].text;
 
     table.innerHTML += `<tr class="row ${strUser.toLowerCase()}" style="display: table-row">
                             <td>${addInput.value}</td>
-                            <td>${strUser}</td>
+                            <td>${strUser}  <span class="delete" onclick="deleteRow(this)">&times;</span></td>
                         </tr>`;
-    // let content1 = `<li class="row ${strUser.toLowerCase()} style="display: block">${addInput.value}, ${strUser}</li>`;
     addInput.value = "";
 })
 

@@ -2,8 +2,7 @@
     transition: all 0.5s;
 }
 .filter{
-    margin: 100px 0 0 150px;
-    width: 100%;
+    margin: 100px 0 70px 150px;
 }
 button{
     padding: 10px 20px;
@@ -24,6 +23,12 @@ button{
     padding: 20px;
     text-align: center;
     cursor: pointer;
+}
+span{
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
 }
 input{
     background-repeat: no-repeat;

@@ -1,3 +1,6 @@
+*{  
+    transition: width 0.5s;
+}
 .calculator {
     margin: 50px auto;
     padding: 15px;
