@@ -4,6 +4,7 @@ let numbers = document.querySelectorAll(".num");
 let number1 = null;
 let number2 = null;
 let operator = null;
+let asd = document.querySelector(".asd");
 
 for(let i=0; i<btns.length; i++){
     btns[i].addEventListener("click", () => {
@@ -13,14 +14,6 @@ for(let i=0; i<btns.length; i++){
 
         display.innerHTML += btns[i].textContent;
 
-        // if(btns[i].textContent == '.'){
-        //     let dsp = display.textContent;
-        //     if(dsp.indexOf('.') == -1){
-        //         display.textContent += '';                
-        //     }else{
-        //         display.textContent = dsp;
-        //     }
-        // }
         
         if(btns[i].className == "operation"){
             let temp = display.textContent;
@@ -28,28 +21,50 @@ for(let i=0; i<btns.length; i++){
             display.textContent = "0";
             //console.log(number1);
             operator = btns[i].textContent;
+            asd.innerHTML += `${number1} ${operator}`
             //console.log(operator);
         }
 
         if(btns[i].className == "equal"){
             number2 = display.textContent; 
-            //console.log(number2);
+            asd.innerHTML += ` ${number2.slice(0, number2.length-1)}`;
+            setTimeout(function(){ asd.innerHTML = "" }, 1500);
         }
 
         if(number1 && number2){            
             let res = calculate(number1, number2, operator);
             display.textContent = res;
-            number1 = display.textContent;
+            number1 = display.textContent;            
             number2 = null;
             operator = null;           
         }
-
+        
+        if(btns[i].textContent == '.'){
+            display = document.querySelector(".display");
+            if(display.indexOf('.') == -1){
+                display.textContent += '';                
+            }else{
+                display.textContent += '.';
+            }
+        }
 
         if(btns[i].dataset.action == "clear"){
             display.textContent = "0";
         }
-
     })
+}
+
+const coma = () => {
+    const coma = () => {
+        if(btns[i].textContent == '.'){
+            display = document.querySelector(".display");
+            if(display.indexOf('.') > -1){
+                display.textContent += '';                
+            }else{
+                display.textContent += '.';
+            }
+        }
+    }
 }
 
 const calculate = (num1, num2, op) => {

@@ -15,6 +15,7 @@
     font-size: 35px;
     text-align: center;
     background-color: #C8C6C6;
+    position: relative;
   }
   .calculator .buttons {
     display: grid;
@@ -49,6 +50,12 @@
     grid-column: 4/5;
     grid-template-columns: 150px;
     grid-template-rows: 360px;
+  }
+  .asd{
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+    font-size: 20px;
   }
   @media (max-width: 850px){
     .calculator{
