@@ -13,7 +13,11 @@ let deleteSpan = document.querySelectorAll("span");
 
 add.addEventListener('click', () => {
     if(addDiv.style.height == "0px"){
-        addDiv.style.height = '57px';
+        if(window.innerWidth <= 932){
+            addDiv.style.height = '110px';
+        }else{
+            addDiv.style.height = '57px';
+        }
         select.style.display = 'inline-block';
         icon.style.transform = 'rotate(180deg)';
         addBtn.style.display = 'inline-block';

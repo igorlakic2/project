@@ -4,7 +4,7 @@ let numbers = document.querySelectorAll(".num");
 let number1 = null;
 let number2 = null;
 let operator = null;
-let asd = document.querySelector(".asd");
+let displayCalc = document.querySelector(".displayCalc");
 
 for(let i=0; i<btns.length; i++){
     btns[i].addEventListener("click", () => {
@@ -21,14 +21,14 @@ for(let i=0; i<btns.length; i++){
             display.textContent = "0";
             //console.log(number1);
             operator = btns[i].textContent;
-            asd.innerHTML += `${number1} ${operator}`
+            displayCalc.innerHTML += `${number1} ${operator}`
             //console.log(operator);
         }
 
         if(btns[i].className == "equal"){
             number2 = display.textContent; 
-            asd.innerHTML += ` ${number2.slice(0, number2.length-1)}`;
-            setTimeout(function(){ asd.innerHTML = "" }, 1500);
+            displayCalc.innerHTML += ` ${number2.slice(0, number2.length-1)}`;
+            setTimeout(function(){ displayCalc.innerHTML = "" }, 1500);
         }
 
         if(number1 && number2){            
@@ -49,7 +49,8 @@ for(let i=0; i<btns.length; i++){
         }
 
         if(btns[i].dataset.action == "clear"){
-            display.textContent = "0";
+            display.innerHTML = "0";
+            displayCalc.innerHTML = "";
         }
     })
 }

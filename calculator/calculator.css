@@ -51,7 +51,7 @@
     grid-template-columns: 150px;
     grid-template-rows: 360px;
   }
-  .asd{
+  .displayCalc{
     position: absolute;
     right: 20px;
     bottom: 7px;
@@ -79,20 +79,24 @@
           grid-template-columns: 100px;
       }
   }
-  /* @media (max-width: 500px){
-    .calculator{
-        width: 80%;
-    }
-    .calculator .buttons{
-      width: unset;
-    }
-    .calculator .buttons .operations{
-      grid-template-columns: 25% 25% 25% 25%;
-    }
-    .calculator .buttons .numbers{
-        grid-template-columns: 100px 100px 100px;
-    }
-    .calculator .buttons .equalDiv {
-        grid-template-columns: 100px;
-    }
-} */
+  @media (max-width: 450px){
+      .calculator{
+          width: 80%;
+      }
+      .calculator .buttons{
+        width: unset;
+        height: unset;
+      }
+      .calculator .buttons .operations{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 70px;
+      }
+      .calculator .buttons .numbers{
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 70px 70px 70px 70px;
+      }
+      .calculator .buttons .equalDiv {
+        grid-template-columns: 100%;
+        grid-template-rows: 280px;
+      }
+  }

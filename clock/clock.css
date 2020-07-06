@@ -79,3 +79,8 @@
     top: 7%;
     left: 24%;
 }
+@media (max-width: 450px){
+    .clock{
+        margin: 120px auto;
+    }
+}
