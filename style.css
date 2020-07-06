@@ -19,4 +19,10 @@ img{
     body{
         padding: 0 10px;
     }
+    img {
+        width: 280px;
+        height: 280px;
+    }.asDiv {
+        padding: 10px 15px;
+    }
 }
