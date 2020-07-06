@@ -15,3 +15,8 @@ img{
     width: 330px;
     height: 315px;
 }
+@media (max-width: 530px){
+    body{
+        padding: 0 10px;
+    }
+}
